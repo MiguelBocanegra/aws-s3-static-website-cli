@@ -1,3 +1,6 @@
+![Status](https://img.shields.io/badge/Status-In%20Progress-yellow?style=for-the-badge&logo=gitbook&logoColor=white)
+
+![Technical Challenge](https://img.shields.io/badge/Challenge-Troubleshooting%20Solved-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 # AWS S3 Static Website Deployment using AWS CLI
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
