@@ -28,15 +28,31 @@ This project demonstrates how to deploy a static website using Amazon S3 and man
 
 ## Architecture
 
-User
-|
-Internet
-|
-Amazon S3 Bucket
-|
-Static Website
-
-![S3 Static Website Hosting via CLI](https://i.ibb.co/XF8T4fM/s3-cli-lab-architecture.png)
+        [ USUARIO / INTERNET ]
+                 │
+                 │ (Acceso vía HTTP/URL)
+                 ▼
+       ┌─────────────────────────┐
+       │    Amazon S3 Bucket     │ <─── [ Política: Acceso Público ]
+       │  (Hosting Estático)     │ <─── [ ACLs: habilitadas ]
+       │                         │
+       │  index.html / images /  │
+       └───────────▲─────────────┘
+                   │
+                   │ (Carga de archivos mediante CLI + Bash Script)
+                   │
+       ┌───────────┴─────────────┐      ┌──────────────────────────┐
+       │   Instancia EC2         │      │     AWS IAM Service      │
+       │ (Admin Environment)     │      │                          │
+       │                         │      │   Usuario: awsS3user     │
+       │  [ AWS CLI Configured ] ◄──────┤   Policy: S3FullAccess   │
+       └───────────▲─────────────┘      └──────────────────────────┘
+                   │
+                   │ (Conexión Segura)
+                   │
+        [ AWS Systems Manager ]
+          (Session Manager)
+          
 
 ## AWS Services Used
 
