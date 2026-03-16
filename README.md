@@ -1,5 +1,5 @@
-AWS S3 Static Website Deployment using AWS CLI
-Project Description
+# AWS S3 Static Website Deployment using AWS CLI
+## Project Description
 
 This project demonstrates how to deploy a static website using Amazon S3 and manage resources using the AWS CLI.
 
@@ -15,7 +15,7 @@ Host a static website on Amazon S3
 
 Automate website updates using a Bash script
 
-Architecture
+## Architecture
 
 User
 |
@@ -25,7 +25,7 @@ Amazon S3 Bucket
 |
 Static Website
 
-AWS Services Used
+## AWS Services Used
 
 Amazon S3
 
@@ -35,7 +35,7 @@ AWS CLI
 
 Amazon EC2
 
-Prerequisites
+## Prerequisites
 
 Before starting this project you need:
 
@@ -47,8 +47,8 @@ Basic Linux knowledge
 
 SSH access to an EC2 instance
 
-Implementation Steps
-1 Create an S3 Bucket
+## Implementation Steps
+## 1 Create an S3 Bucket
 
 Create a bucket using the AWS CLI.
 
@@ -57,7 +57,7 @@ aws s3api create-bucket
 --region us-west-2
 --create-bucket-configuration LocationConstraint=us-west-2
 
-2 Create an IAM User
+## 2 Create an IAM User
 
 Create a new IAM user that will manage the S3 bucket.
 
@@ -69,14 +69,14 @@ aws iam attach-user-policy
 --policy-arn arn:aws:iam::aws/AmazonS3FullAccess
 --user-name awsS3user
 
-3 Enable Static Website Hosting
+## 3 Enable Static Website Hosting
 
 Configure the bucket to host a static website.
 
 aws s3 website s3://my-static-site-bucket/
 --index-document index.html
 
-4 Upload Website Files
+## 4 Upload Website Files
 
 Upload the static website files.
 
@@ -84,15 +84,15 @@ aws s3 cp website/ s3://my-static-site-bucket/
 --recursive
 --acl public-read
 
-5 Verify Files
+## 5 Verify Files
 
 aws s3 ls s3://my-static-site-bucket/
 
-6 Access the Website
+## 6 Access the Website
 
 http://my-static-site-bucket.s3-website-us-west-2.amazonaws.com
 
-Automation Script
+## Automation Script
 
 To automate updates, create the following script.
 
@@ -112,7 +112,7 @@ Run the script to deploy changes.
 
 ./update-website.sh
 
-What I Learned
+## What I Learned
 
 Using AWS CLI to manage AWS resources
 
@@ -122,7 +122,7 @@ Managing IAM users and permissions
 
 Automating deployments using Bash scripts
 
-Future Improvements
+## Future Improvements
 
 Use AWS CloudFront as a CDN
 
@@ -130,7 +130,7 @@ Add a custom domain
 
 Implement CI/CD with GitHub Actions
 
-Author
+## Author
 
 Miguel Bocanegra
 
