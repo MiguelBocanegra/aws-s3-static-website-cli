@@ -14,17 +14,17 @@
 
 This project demonstrates how to deploy a static website using Amazon S3 and manage resources using the AWS CLI.
 
-The goal of this project is to understand how to:
+## The goal of this project is to understand how to:
 
-Create and configure an S3 bucket
+* Create and configure an S3 bucket
 
-Manage permissions using IAM
+* Manage permissions using IAM
 
-Upload files using AWS CLI
+* Upload files using AWS CLI
 
-Host a static website on Amazon S3
+* Host a static website on Amazon S3
 
-Automate website updates using a Bash script
+* Automate website updates using a Bash script
 
 ## Architecture
 
