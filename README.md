@@ -3,12 +3,13 @@
 ![Technical Challenge](https://img.shields.io/badge/Challenge-Troubleshooting%20Solved-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 # AWS S3 Static Website Deployment using AWS CLI
 
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-![S3](https://img.shields.io/badge/Amazon%20S3-569A31?style=for-the-badge&logo=amazons3&logoColor=white)
-![IAM](https://img.shields.io/badge/AWS%20IAM-DD344C?style=for-the-badge&logo=aws-iam&logoColor=white)
-![CLI](https://img.shields.io/badge/AWS%20CLI-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
-![Bash](https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white)
-![Shell](https://img.shields.io/badge/Shell_Script-121011?style=for-the-badge&logo=gnu-bash&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-Cloud-orange)
+![S3](https://img.shields.io/badge/Amazon-S3-green)
+![IAM](https://img.shields.io/badge/Identity-IAM-red)
+![CLI](https://img.shields.io/badge/Interface-CLI-lightgrey)
+![Script](https://img.shields.io/badge/Automation-Bash-blueviolet)
+![Status](https://img.shields.io/badge/Status-In%20Progress-yellow)
+![Difficulty](https://img.shields.io/badge/Difficulty-Beginner-brightgreen)
 
 ## Project Description
 
