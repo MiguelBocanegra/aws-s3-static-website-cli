@@ -36,6 +36,8 @@ Amazon S3 Bucket
 |
 Static Website
 
+![S3 Static Website Hosting via CLI](https://i.ibb.co/XF8T4fM/s3-cli-lab-architecture.png)
+
 ## AWS Services Used
 
 Amazon S3
