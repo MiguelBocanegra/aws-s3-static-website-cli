@@ -8,8 +8,6 @@
 ![IAM](https://img.shields.io/badge/Identity-IAM-red)
 ![CLI](https://img.shields.io/badge/Interface-CLI-lightgrey)
 ![Script](https://img.shields.io/badge/Automation-Bash-blueviolet)
-![Status](https://img.shields.io/badge/Status-In%20Progress-yellow)
-![Difficulty](https://img.shields.io/badge/Difficulty-Beginner-brightgreen)
 
 ## Project Description
 
