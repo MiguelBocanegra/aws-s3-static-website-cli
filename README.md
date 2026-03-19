@@ -137,7 +137,86 @@ aws configure
 aws sts get-caller-identity
 ```
 This command returns a JSON output confirming the active identity and connection.
-    
+
+---
+After successfully configuring and connecting the IAM user to the AWS CLI, we can begin working.
+
+25. Create an S3 bucket using the following command, specifying the bucket name and the desired region:
+```bash
+aws s3 mb s3://<bucket-name> --region <region>
+```
+---
+Since this bucket will host a static website, it must be publicly accessible. By default, S3 buckets are created as private, so the public access settings must be modified.
+
+26. Run the following command to disable the block public access configuration:
+```bash
+aws s3api put-public-access-block \
+--bucket <bucket-name> \
+--public-access-block-configuration \
+BlockPublicAcls=false,IgnorePublicAcls=false,BlockPublicPolicy=false,RestrictPublicBuckets=false
+```
+27. To verify that the bucket allows public access, run:
+```bash
+aws s3api get-public-access-block --bucket <bucket-name>
+```
+If the output shows all values set to **false**, it means that public access is enabled for the bucket.
+
+---
+To upload the website, a local copy of the files is required, since the lab environment does not provide access to them externally. You can either use your own files or download a template from the web, for example from https://html5up.net/, and store it locally.
+
+28. After adding the file, extract its contents using the  command:
+```bash
+unzip
+```
+Store the extracted files in a new directory:
+30. Create a new directory using the command:
+```bash
+mkdir
+```
+31. Move the extracted files into this directory using the command:
+```bash
+mv
+```
+To upload the static website files:
+33. Navigate to the directory that contains the extracted files using the command:
+```bash
+cd
+```
+34. Inside the directory, run the following command to upload the files to the S3 bucket:
+```bash
+aws s3 cp . s3://<your-bucket-name> --recursive
+```
+35. To verify that the files were uploaded successfully, run:
+```bash
+aws s3 ls s3://<your-bucket-name>
+```
+To allow external access to the website files, a bucket policy must be applied that grants public read permissions to all objects in the bucket.
+36. Run the following command:
+```bash
+{
+"Effect":"Allow",
+"Principal":"*",
+"Action":"s3:GetObject",
+"Resource":"arn:aws:s3:::tu-bucket/*"
+}
+```
+37. To configure the bucket for static website hosting, run:
+```bash
+aws s3 website s3://<your-bucket-name> --index-document index.html
+```
+38. Verify that the bucket is configured for static website hosting by running the following command:
+```bash
+aws s3api get-bucket-website --bucket <your-bucket-name>
+```
+If a valid JSON output is returned, it means the configuration was successful.
+
+---
+Once the website is configured, go to Amazon S3 in the AWS Management Console to obtain the website URL.
+
+39. Open the bucket you created.
+40. Navigate to the **Properties** tab.
+41. Scroll down to the **Static website hosting** section.
+42. Copy the endpoint URL provided and open it in your browser to access the website.
 
 ## What I Learned
 
