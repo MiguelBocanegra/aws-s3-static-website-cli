@@ -72,69 +72,72 @@ Optional:
 8. Verify deployment and access the website
 
 ## Implementation Steps
-## 1 Create an S3 Bucket
+ 1. Log in to the AWS Management Console using the root user.
+ 2. Navigate to IAM.
+ 3. From the left panel, select **Users**.
+ 4. Click on **Create user** in the top right corner.
+ 5. Enter a username and click **Next**.
+ 6. Select **Attach policies directly** under Permissions options.
+ 7. earch for and select **AmazonS3FullAccess**, which allows performing all required S3 operations.
+ 8. Click **Next**, then click **Create user**.
+---
+To enable CLI access:
 
-Create a bucket using the AWS CLI.
+9. Go back to **Users** and select the created user.
+10. Navigate to **Security credentials**.
+11. Under **Access keys**, click **Create access key**.
+12. Select **Command Line Interface (CLI)** as the use case and click **Next**.
+13. Confirm the recommendation checkbox and click **Next**
+14. Optionally add a description, then click **Create access key**.
+15. Save the **Access Key ID** and **Secret Access Key** securely, as they will be used for CLI authentication.
+16. Click **Done** to finish.
+---
 
-aws s3api create-bucket
---bucket my-static-site-bucket
---region us-west-2
---create-bucket-configuration LocationConstraint=us-west-2
+After completing this configuration, the IAM user can be used from a CLI environment. For this project, a VS Code terminal provided by GitHub Codespaces is used.
 
-## 2 Create an IAM User
+To begin, install the AWS CLI in the terminal.
 
-Create a new IAM user that will manage the S3 bucket.
+---
+17. Download the installation file:
+```bash
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+```
+18. Unzip the downloaded file:
+```bash
+unzip awscliv2.zip
+```
+19. Install the AWS CLI:
+```bash
+unzip awscliv2.zip
+```
+20. Install the AWS CLI:
+```bash
+sudo ./aws/install
+```
+21. Verify the installation:
+```bash
+aws --version
+```
+---
+After installing the CLI, configure it to use the IAM user that was created.
 
-aws iam create-user --user-name awsS3user
+22. Run the following command:
+```bash
+aws configure
+```
+23. Enter the following information:
 
-Attach the S3 full access policy.
+- Access Key ID (generated when creating the user)
+- Secret Access Key (generated when creating the user)
+- Default region (the AWS region where the resources will be created and managed)
+- Output format (in this case, json)
 
-aws iam attach-user-policy
---policy-arn arn:aws:iam::aws/AmazonS3FullAccess
---user-name awsS3user
-
-## 3 Enable Static Website Hosting
-
-Configure the bucket to host a static website.
-
-aws s3 website s3://my-static-site-bucket/
---index-document index.html
-
-## 4 Upload Website Files
-
-Upload the static website files.
-
-aws s3 cp website/ s3://my-static-site-bucket/
---recursive
---acl public-read
-
-## 5 Verify Files
-
-aws s3 ls s3://my-static-site-bucket/
-
-## 6 Access the Website
-
-http://my-static-site-bucket.s3-website-us-west-2.amazonaws.com
-
-## Automation Script
-
-To automate updates, create the following script.
-
-scripts/update-website.sh
-
-#!/bin/bash
-
-aws s3 cp website/ s3://my-static-site-bucket/
---recursive
---acl public-read
-
-Make it executable.
-
-chmod +x update-website.sh
-
-Run the script to deploy changes.
-
-./update-website.sh
+24. To verify that the configuration was successful and that the CLI is properly authenticated, run:
+```bash
+aws sts get-caller-identity
+```
+This command returns a JSON output confirming the active identity and connection.
+    
 
 ## What I Learned
 
