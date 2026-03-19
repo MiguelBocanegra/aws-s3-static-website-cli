@@ -27,11 +27,10 @@ The project is based on a guided lab, but it was fully adapted and implemented i
 
 ## Architecture
 
-User (Browser) 
-
-↓  
-HTTP Request  
-↓  
+User (Browser)
+↓
+HTTP Request
+↓
 Amazon S3 Bucket (Static Website Hosting)
           
 
