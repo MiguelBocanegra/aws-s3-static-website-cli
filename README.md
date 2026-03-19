@@ -1,7 +1,7 @@
 ![Status](https://img.shields.io/badge/Status-In%20Progress-yellow?style=for-the-badge&logo=gitbook&logoColor=white)
 
 ![Technical Challenge](https://img.shields.io/badge/Challenge-Troubleshooting%20Solved-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
-# AWS S3 Static Website Deployment using AWS CLI
+# # AWS S3 Static Website Hosting (CLI Project)
 
 ![AWS](https://img.shields.io/badge/AWS-Cloud-orange)
 ![S3](https://img.shields.io/badge/Amazon-S3-green)
@@ -11,69 +11,61 @@
 
 ## Project Description
 
-This project demonstrates how to deploy a static website using Amazon S3 and manage resources using the AWS CLI.
+This project demonstrates how to deploy a static website using Amazon S3 and AWS CLI.
+
+The project is based on a guided lab, but it was fully adapted and implemented in a personal AWS account. Several modifications were required to replicate the lab environment, including manual configuration of IAM users, CLI setup, and S3 permissions.
+
+---
 
 ## The goal of this project is to understand how to:
 
-* Create and configure an S3 bucket
-
-* Manage permissions using IAM
-
-* Upload files using AWS CLI
-
-* Host a static website on Amazon S3
-
-* Automate website updates using a Bash script
+- Deploy a static website using Amazon S3
+- Use AWS CLI for resource management
+- Configure IAM users and access keys
+- Understand and apply bucket policies
+- Troubleshoot real-world AWS permission issues
 
 ## Architecture
 
-        [ USUARIO / INTERNET ]
-                 │
-                 │ (Acceso vía HTTP/URL)
-                 ▼
-       ┌─────────────────────────┐
-       │    Amazon S3 Bucket     │ <─── [ Política: Acceso Público ]
-       │  (Hosting Estático)     │ <─── [ ACLs: habilitadas ]
-       │                         │
-       │  index.html / images /  │
-       └───────────▲─────────────┘
-                   │
-                   │ (Carga de archivos mediante CLI + Bash Script)
-                   │
-       ┌───────────┴─────────────┐      ┌──────────────────────────┐
-       │   Instancia EC2         │      │     AWS IAM Service      │
-       │ (Admin Environment)     │      │                          │
-       │                         │      │   Usuario: awsS3user     │
-       │  [ AWS CLI Configured ] ◄──────┤   Policy: S3FullAccess   │
-       └───────────▲─────────────┘      └──────────────────────────┘
-                   │
-                   │ (Conexión Segura)
-                   │
-        [ AWS Systems Manager ]
-          (Session Manager)
+User (Browser) 
+↓  
+HTTP Request  
+↓  
+Amazon S3 Bucket (Static Website Hosting)
           
 
 ## AWS Services Used
 
-Amazon S3
-
-AWS IAM
-
-AWS CLI
-
-Amazon EC2
+| Service | Purpose |
+|--------|--------|
+| Amazon S3 | Static website hosting |
+| AWS CLI | Resource management |
+| IAM | User and access management |
+| HTML/CSS Template | Website content |
 
 ## Prerequisites
 
-Before starting this project you need:
+Before starting this project, the following requirements are needed:
 
-AWS account
+- An active AWS account
+- Basic knowledge of Linux commands
+- IAM user with programmatic access (Access Key & Secret Key)
+- A terminal environment (e.g., VS Code, Codespaces, or local machine)
+- Internet connection
 
-AWS CLI configured
+Optional:
+- Basic understanding of cloud computing concepts
 
-Basic Linux knowledge
+## 🚀 Steps Overview
 
-SSH access to an EC2 instance
+1. Create an IAM user with programmatic access
+2. Install and configure AWS CLI
+3. Create an S3 bucket
+4. Disable Block Public Access settings
+5. Apply a bucket policy for public read access
+6. Upload static website files to S3
+7. Enable static website hosting
+8. Verify deployment and access the website
 
 ## Implementation Steps
 ## 1 Create an S3 Bucket
@@ -142,21 +134,18 @@ Run the script to deploy changes.
 
 ## What I Learned
 
-Using AWS CLI to manage AWS resources
-
-Deploying static websites using Amazon S3
-
-Managing IAM users and permissions
-
-Automating deployments using Bash scripts
+* How to create a virtual machine in AWS
+* How SSH authentication works
+* Basic Linux server management
+* Cloud infrastructure fundamentals
 
 ## Future Improvements
 
-Use AWS CloudFront as a CDN
-
-Add a custom domain
-
-Implement CI/CD with GitHub Actions
+- Integrate Amazon CloudFront for content delivery (CDN)
+- Add a custom domain with Route 53
+- Enable HTTPS using SSL/TLS certificates
+- Automate deployment using scripts or Infrastructure as Code (IaC)
+- Improve security by restricting public access using advanced configurations
 
 ## Author
 
