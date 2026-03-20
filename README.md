@@ -75,7 +75,7 @@ Optional:
  3. Navigate to IAM.
 ![2](./imagenes/2.png)
 
- 5. From the left panel, select **Users**.
+ 3. From the left panel, select **Users**.
 ![3](./imagenes/3.png)
 
  7. Click on **Create user** in the top right corner.
