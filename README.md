@@ -33,7 +33,7 @@ User (Browser)
 ▼
 Amazon S3 Bucket (Static Website Hosting)
 
-<img src="./imagenes/infra.png" width="600">
+![Architecture](./imagenes/infra.png)
 
 ## AWS Services Used
 
@@ -70,17 +70,19 @@ Optional:
 
 ## Implementation Steps
  1. Log in to the AWS Management Console using the root user.
-    <img src="./imagenes/1.png" width="600">
+![1](./imagenes/1.png)
     
  3. Navigate to IAM.
 ![2](./imagenes/2.png)
 
  5. From the left panel, select **Users**.
- 6. Click on **Create user** in the top right corner.
- 7. Enter a username and click **Next**.
- 8. Select **Attach policies directly** under Permissions options.
- 9. Search for and select **AmazonS3FullAccess**, which allows performing all required S3 operations.
- 10. Click **Next**, then click **Create user**.
+![3](./imagenes/3.png)
+
+ 7. Click on **Create user** in the top right corner.
+ 8. Enter a username and click **Next**.
+ 9. Select **Attach policies directly** under Permissions options.
+ 10. Search for and select **AmazonS3FullAccess**, which allows performing all required S3 operations.
+ 11. Click **Next**, then click **Create user**.
 ---
 To enable CLI access:
 
