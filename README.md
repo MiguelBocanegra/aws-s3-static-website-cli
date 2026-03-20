@@ -33,6 +33,7 @@ User (Browser)
 ▼
 Amazon S3 Bucket (Static Website Hosting)
 
+![Architecture](./images/infra.png)
 ## AWS Services Used
 
 | Service | Purpose |
