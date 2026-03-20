@@ -72,7 +72,7 @@ Optional:
  1. Log in to the AWS Management Console using the root user.
 ![1](./imagenes/1.png)
     
- 3. Navigate to IAM.
+ 2. Navigate to IAM.
 ![2](./imagenes/2.png)
 
  3. From the left panel, select **Users**.
