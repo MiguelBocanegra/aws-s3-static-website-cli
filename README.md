@@ -33,7 +33,7 @@ User (Browser)
 ▼
 Amazon S3 Bucket (Static Website Hosting)
 
-<img src="./ec2-images/infra.png" width="600">
+<img src="./images/infra.png" width="600">
 ## AWS Services Used
 
 | Service | Purpose |
