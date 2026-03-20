@@ -70,13 +70,14 @@ Optional:
 
 ## Implementation Steps
  1. Log in to the AWS Management Console using the root user.
+  <img src="./imagenes/1.png" width="600">
  2. Navigate to IAM.
  3. From the left panel, select **Users**.
- 4. Click on **Create user** in the top right corner.
- 5. Enter a username and click **Next**.
- 6. Select **Attach policies directly** under Permissions options.
- 7. Search for and select **AmazonS3FullAccess**, which allows performing all required S3 operations.
- 8. Click **Next**, then click **Create user**.
+ 5. Click on **Create user** in the top right corner.
+ 6. Enter a username and click **Next**.
+ 7. Select **Attach policies directly** under Permissions options.
+ 8. Search for and select **AmazonS3FullAccess**, which allows performing all required S3 operations.
+ 9. Click **Next**, then click **Create user**.
 ---
 To enable CLI access:
 
