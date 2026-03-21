@@ -80,6 +80,7 @@ Optional:
 ![step_3](./imagenes/3.png)
 
  4. Click on **Create user** in the top right corner.
+    
  ![step_4](./imagenes/4.png)
 
  8. Enter a username and click **Next**.
