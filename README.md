@@ -132,7 +132,10 @@ To enable CLI access:
 
 ![step_15](./imagenes/15.png)
 
-22. Click **Done** to finish.
+16. Click **Done** to finish.
+
+![step_16](./imagenes/16.png)
+
 ---
 
 After completing this configuration, the IAM user can be used from a CLI environment. For this project, a VS Code terminal provided by GitHub Codespaces is used.
