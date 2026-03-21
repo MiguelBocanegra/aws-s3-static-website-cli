@@ -231,6 +231,8 @@ Store the extracted files in a new directory:
 ```bash
 mkdir website
 ```
+![step_28](./imagenes/28.png)
+
 29. Move the extracted files into this directory using the command:
 ```bash
 mv * website/
