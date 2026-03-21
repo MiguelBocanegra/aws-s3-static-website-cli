@@ -9,6 +9,12 @@
 ![CLI](https://img.shields.io/badge/Interface-CLI-lightgrey)
 ![Script](https://img.shields.io/badge/Automation-Bash-blueviolet)
 
+## Project Overview
+
+This project demonstrates how to deploy a static website on Amazon S3 using AWS CLI, including IAM configuration, public access management, and troubleshooting common errors.
+
+The implementation was adapted from a guided AWS lab, with additional configurations required to make it work in a real AWS environment.
+
 ## Project Description
 
 This project demonstrates how to deploy a static website using Amazon S3 and AWS CLI.
@@ -16,7 +22,13 @@ This project demonstrates how to deploy a static website using Amazon S3 and AWS
 The project is based on a guided lab, but it was fully adapted and implemented in a personal AWS account. Several modifications were required to replicate the lab environment, including manual configuration of IAM users, CLI setup, and S3 permissions.
 
 ---
+## Tech Stack
 
+- Amazon S3
+- AWS CLI
+- AWS IAM
+- GitHub Codespaces
+- 
 ## The goal of this project is to understand how to:
 
 - Deploy a static website using Amazon S3
@@ -71,7 +83,7 @@ Optional:
 ## Implementation Steps
 ## 📸 Screenshots
 
- 1. Log in to the AWS Management Console using the root user.
+ 1. Log in to the AWS Management Console using the root user (initial setup only – not recommended for regular use).
     
 ![step_1](./imagenes/1.png)
     
@@ -221,7 +233,7 @@ If the output shows all values set to **false**, it means that public access is 
 ![step_26](./imagenes/26.png)
 
 ---
-To upload the website, a local copy of the files is required, since the lab environment does not provide access to them externally. You can either use your own files or download a template from the web, for example from https://html5up.net/, and store it locally.
+To deploy the website, a local copy of the files is required, since the lab environment does not provide access to them externally. You can either use your own files or download a template from the web, for example from https://html5up.net/, and store it locally.
 
 27. After adding the file, extract its contents using the  command:
 ```bash
@@ -327,6 +339,13 @@ Once the website is configured, go to Amazon S3 in the AWS Management Console to
 - Disabled Block Public Access settings
 - Applied bucket policy for public read access
 - Used an external template to replace missing lab files
+
+## Final Result
+
+The static website was successfully deployed and is publicly accessible via the S3 website endpoint.
+
+Example:
+http://<your-bucket-name>.s3-website-<region>.amazonaws.com
 
 ## Future Improvements
 
