@@ -96,6 +96,11 @@ Optional:
  ![step_7](./imagenes/7.png)
    
  8. Click **Next**, then click **Create user**.
+
+![step_8](./imagenes/8.png)
+
+![step_8_1](./imagenes/8_1.png)
+
 ---
 To enable CLI access:
 
