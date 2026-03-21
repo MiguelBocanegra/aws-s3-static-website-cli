@@ -165,6 +165,8 @@ sudo ./aws/install
 ```bash
 aws --version
 ```
+![step_20](./imagenes/20.png)
+
 ---
 After installing the CLI, configure it to use the IAM user that was created.
 
