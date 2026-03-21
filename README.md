@@ -108,7 +108,10 @@ To enable CLI access:
    
 ![step_9](./imagenes/3.png)
 
-11. Navigate to **Security credentials**.
+10. Navigate to **Security credentials**.
+
+![step_10](./imagenes/9.png)
+ 
 12. Under **Access keys**, click **Create access key**.
 13. Select **Command Line Interface (CLI)** as the use case and click **Next**.
 14. Confirm the recommendation checkbox and click **Next**
