@@ -112,12 +112,15 @@ To enable CLI access:
 
 ![step_10](./imagenes/9.png)
  
-12. Under **Access keys**, click **Create access key**.
-13. Select **Command Line Interface (CLI)** as the use case and click **Next**.
-14. Confirm the recommendation checkbox and click **Next**
-15. Optionally add a description, then click **Create access key**.
-16. Save the **Access Key ID** and **Secret Access Key** securely, as they will be used for CLI authentication.
-17. Click **Done** to finish.
+11. Under **Access keys**, click **Create access key**.
+
+![step_11](./imagenes/11.png)
+
+14. Select **Command Line Interface (CLI)** as the use case and click **Next**.
+15. Confirm the recommendation checkbox and click **Next**
+16. Optionally add a description, then click **Create access key**.
+17. Save the **Access Key ID** and **Secret Access Key** securely, as they will be used for CLI authentication.
+18. Click **Done** to finish.
 ---
 
 After completing this configuration, the IAM user can be used from a CLI environment. For this project, a VS Code terminal provided by GitHub Codespaces is used.
