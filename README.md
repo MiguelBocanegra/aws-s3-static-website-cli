@@ -70,16 +70,18 @@ Optional:
 
 ## Implementation Steps
  1. Log in to the AWS Management Console using the root user.
-![1](./imagenes/1.png)
+![step_1](./imagenes/1.png)
     
  2. Navigate to IAM.
-![2](./imagenes/2.png)
+![step_2](./imagenes/2.png)
 
  3. From the left panel, select **Users**.
     
-![3](./imagenes/3.png)
+![step_3](./imagenes/3.png)
 
- 7. Click on **Create user** in the top right corner.
+ 4. Click on **Create user** in the top right corner.
+ ![step_4](./imagenes/4.png)
+
  8. Enter a username and click **Next**.
  9. Select **Attach policies directly** under Permissions options.
  10. Search for and select **AmazonS3FullAccess**, which allows performing all required S3 operations.
