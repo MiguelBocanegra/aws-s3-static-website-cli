@@ -83,7 +83,7 @@ Optional:
     
  ![step_4](./imagenes/4.png)
 
- 8. Enter a username and click **Next**.
+ 5. Enter a username and click **Next**.
 
 ![step_5](./imagenes/5.png)
 
