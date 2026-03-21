@@ -251,11 +251,16 @@ cd website
 ```bash
 aws s3 cp . s3://<your-bucket-name> --recursive
 ```
+![step_31](./imagenes/31.png)
+
 32. To verify that the files were uploaded successfully, run:
 ```bash
 aws s3 ls s3://<your-bucket-name>
 ```
+![step_32](./imagenes/32.png)
+
 To allow external access to the website files, a bucket policy must be applied that grants public read permissions to all objects in the bucket.
+
 33. Run the following command:
 ```bash
 aws s3api put-bucket-policy \
@@ -274,11 +279,15 @@ aws s3api put-bucket-policy \
 ```bash
 aws s3 website s3://<your-bucket-name> --index-document index.html
 ```
+![step_34](./imagenes/34.png)
+
 35. Verify that the bucket is configured for static website hosting by running the following command:
 ```bash
 aws s3api get-bucket-website --bucket <your-bucket-name>
 ```
 If a valid JSON output is returned, it means the configuration was successful.
+
+![step_35](./imagenes/35.png)
 
 ---
 Once the website is configured, go to Amazon S3 in the AWS Management Console to obtain the website URL.
