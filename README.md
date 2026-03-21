@@ -214,6 +214,8 @@ aws s3api get-public-access-block --bucket <bucket-name>
 ```
 If the output shows all values set to **false**, it means that public access is enabled for the bucket.
 
+![step_26](./imagenes/26.png)
+
 ---
 To upload the website, a local copy of the files is required, since the lab environment does not provide access to them externally. You can either use your own files or download a template from the web, for example from https://html5up.net/, and store it locally.
 
