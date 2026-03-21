@@ -147,6 +147,8 @@ To begin, install the AWS CLI in the terminal.
 ```bash
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 ```
+![step_17](./imagenes/17.png)
+
 18. Unzip website the downloaded file:
 ```bash
 unzip awscliv2.zip
