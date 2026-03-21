@@ -69,10 +69,14 @@ Optional:
 8. Verify deployment and access the website
 
 ## Implementation Steps
+## 📸 Screenshots
+
  1. Log in to the AWS Management Console using the root user.
+    
 ![step_1](./imagenes/1.png)
     
  2. Navigate to IAM.
+    
 ![step_2](./imagenes/2.png)
 
  3. From the left panel, select **Users**.
@@ -149,7 +153,7 @@ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip
 ```
 ![step_17](./imagenes/17.png)
 
-18. Unzip website the downloaded file:
+18. Unzip the downloaded file:
 ```bash
 unzip awscliv2.zip
 ```
@@ -221,7 +225,7 @@ To upload the website, a local copy of the files is required, since the lab envi
 
 27. After adding the file, extract its contents using the  command:
 ```bash
-unzip
+unzip template.zip
 ```
 ![step_27](./imagenes/27.png)
 
@@ -293,9 +297,16 @@ If a valid JSON output is returned, it means the configuration was successful.
 Once the website is configured, go to Amazon S3 in the AWS Management Console to obtain the website URL.
 
 36. Open the bucket you created.
-37. Navigate to the **Properties** tab.
-38. Scroll down to the **Static website hosting** section.
+
+![step_36](./imagenes/36.png)
+
+38. Navigate to the **Properties** tab and scroll down to the **Static website hosting** section.
+
+![step_38](./imagenes/38.png)
+    
 39. Copy the endpoint URL provided and open it in your browser to access the website.
+
+![step_39](./imagenes/39.png)
 
 ## What I Learned
 
@@ -305,13 +316,13 @@ Once the website is configured, go to Amazon S3 in the AWS Management Console to
 - How to troubleshoot Access Denied (403) errors
 - The importance of bucket policies and public access configuration
 - 
-  ## ⚠️ Challenges Faced
+  ## Challenges Faced
 
 - 403 Forbidden error due to blocked public access
 - Missing website files outside the lab environment
 - Manual configuration of IAM and CLI without preconfigured resources
 
-## ✅ Solutions Implemented
+## Solutions Implemented
 
 - Disabled Block Public Access settings
 - Applied bucket policy for public read access
