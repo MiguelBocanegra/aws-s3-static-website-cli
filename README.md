@@ -237,6 +237,8 @@ mkdir website
 ```bash
 mv * website/
 ```
+![step_29](./imagenes/29.png)
+
 To upload the static website files:
 30. Navigate to the directory that contains the extracted files using the command:
 ```bash
