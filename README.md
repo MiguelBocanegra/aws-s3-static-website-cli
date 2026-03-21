@@ -84,9 +84,12 @@ Optional:
  ![step_4](./imagenes/4.png)
 
  8. Enter a username and click **Next**.
- 9. Select **Attach policies directly** under Permissions options.
- 10. Search for and select **AmazonS3FullAccess**, which allows performing all required S3 operations.
- 11. Click **Next**, then click **Create user**.
+
+![step_5](./imagenes/5.png)
+
+ 10. Select **Attach policies directly** under Permissions options.
+ 11. Search for and select **AmazonS3FullAccess**, which allows performing all required S3 operations.
+ 12. Click **Next**, then click **Create user**.
 ---
 To enable CLI access:
 
