@@ -159,6 +159,8 @@ unzip awscliv2.zip
 ```bash
 sudo ./aws/install
 ```
+![step_19](./imagenes/19.png)
+
 20. Verify the installation:
 ```bash
 aws --version
