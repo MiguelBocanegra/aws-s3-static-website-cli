@@ -223,7 +223,10 @@ To upload the website, a local copy of the files is required, since the lab envi
 ```bash
 unzip
 ```
+![step_27](./imagenes/27.png)
+
 Store the extracted files in a new directory:
+
 28. Create a new directory using the command:
 ```bash
 mkdir website
