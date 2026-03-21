@@ -87,7 +87,7 @@ Optional:
 
 ![step_5](./imagenes/5.png)
 
- 10. Select **Attach policies directly** under Permissions options.
+ 6. Select **Attach policies directly** under Permissions options.
 
  ![step_6](./imagenes/6.png)
   
