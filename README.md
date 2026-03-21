@@ -187,6 +187,8 @@ aws sts get-caller-identity
 ```
 This command returns a JSON output confirming the active identity and connection.
 
+![step_23](./imagenes/23.png)
+
 ---
 After successfully configuring and connecting the IAM user to the AWS CLI, we can begin working.
 
