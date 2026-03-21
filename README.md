@@ -196,6 +196,8 @@ After successfully configuring and connecting the IAM user to the AWS CLI, we ca
 ```bash
 aws s3 mb s3://<bucket-name> --region <region>
 ```
+![step_24](./imagenes/24.png)
+
 ---
 Since this bucket will host a static website, it must be publicly accessible. By default, S3 buckets are created as private, so the public access settings must be modified.
 
