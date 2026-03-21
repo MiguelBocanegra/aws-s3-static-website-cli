@@ -91,8 +91,11 @@ Optional:
 
  ![step_6](./imagenes/6.png)
   
- 12. Search for and select **AmazonS3FullAccess**, which allows performing all required S3 operations.
- 13. Click **Next**, then click **Create user**.
+ 7. Search for and select **AmazonS3FullAccess**, which allows performing all required S3 operations.
+
+ ![step_7](./imagenes/7.png)
+   
+ 8. Click **Next**, then click **Create user**.
 ---
 To enable CLI access:
 
