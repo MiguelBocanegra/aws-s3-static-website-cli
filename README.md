@@ -240,10 +240,13 @@ mv * website/
 ![step_29](./imagenes/29.png)
 
 To upload the static website files:
+
 30. Navigate to the directory that contains the extracted files using the command:
 ```bash
 cd website
 ```
+![step_30](./imagenes/30.png)
+
 31. Inside the directory, run the following command to upload the files to the S3 bucket:
 ```bash
 aws s3 cp . s3://<your-bucket-name> --recursive
