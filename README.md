@@ -28,7 +28,7 @@ The project is based on a guided lab, but it was fully adapted and implemented i
 - AWS CLI
 - AWS IAM
 - GitHub Codespaces
-- 
+  
 ## The goal of this project is to understand how to:
 
 - Deploy a static website using Amazon S3
