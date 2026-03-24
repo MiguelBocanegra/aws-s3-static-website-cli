@@ -1,4 +1,4 @@
-![Status](https://img.shields.io/badge/Status-In%20Progress-yellow?style=for-the-badge&logo=gitbook&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Completed-success?style=flat-square)
 
 ![Technical Challenge](https://img.shields.io/badge/Challenge-Troubleshooting%20Solved-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 # AWS S3 Static Website Hosting (CLI Project)
